@@ -181,7 +181,7 @@ Explanation:
 # Running the Program Demo
 
 Follow the steps below to set up and run the program:
-1. Open terminal inside VS Code
+1. Open terminal 
 2. Compile the program by pasting in this command:
 
 ```cpp
