@@ -91,10 +91,6 @@ OTHER KEY FUNCTIONS:
 - When capacity is full, it removes the last item and returns to the cache
 - It is removed from memory
 
-```cpp
-4. class DocumentCache
-``` 
-
 CODE SNIPPET 2:
 
 ``` cpp
@@ -107,6 +103,7 @@ private:
 };
 
 ```
+The DocumentCache class uses an LRU which keeps track of the documents opened in order
 
 Key Member Variables
 
