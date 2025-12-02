@@ -52,8 +52,9 @@ The benefit of two pointers is that the list can be traversed either way.
 Operations like inserting or deleting can be done efficiently without traversing through the whole list.
 
 KEY FUNCTION:
- 
-void DocumentCache::open_document(const string& doc_name) 
+```cpp
+void DocumentCache::open_document(const string& doc_name)
+```
  
 - This function handles the opening of documents
 - It starts by searching the hash table to find out if the document exists 
@@ -66,28 +67,33 @@ void DocumentCache::open_document(const string& doc_name)
 
 
 OTHER KEY FUNCTIONS:
-
+```cpp
 1. Node* insert_to_front(const string& doc_name)
+```
 
 - This function makes a new node and sets it in the first position
 - Any new document is declared as most recent
 - Returns the pointer to this node and gets saved in the hash
 
-
+```cpp
 2. void DoublyLinkedList::move_to_front(Node* node)
+```
 
 - This function updates the document's position in the list
 - If a document is already in the cache, then it moves back to the front 
 - This avoids any duplicate entries and maintains the order (most recent to least recent)
 
-
+```cpp
 3. Node* DoublyLinkedList::remove_tail()
+```
 
 - This function removes the oldest document from the list
 - When capacity is full, it removes the last item and returns to the cache
 - It is removed from memory
 
-4. class DocumentCache 
+```cpp
+4. class DocumentCache
+``` 
 
 CODE SNIPPET 2:
 
