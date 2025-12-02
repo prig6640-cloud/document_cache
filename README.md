@@ -131,7 +131,7 @@ Key Member Variables
 
 Operation                  Average Case        Worst Case          Explanation
 
-1. Insert/Open new Doc       O(1)                O(1)        Makes new                                                                         node/stores ptr
+1. Insert/Open new Doc       O(1)                O(1)        Makes new node/stores ptr
 2. Search Doc                O(1)                O(1)        Hash finds node fast
 3. Move Doc to Front         O(1)                O(1)        Only ptr updates
 4. Delete Oldest Doc         O(1)                O(1)        Deletes tail
