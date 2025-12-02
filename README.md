@@ -12,12 +12,15 @@ This project highlights:
 
 # File Structure
 
+```cpp
 main.cpp                    # main file that runs to test cache
 DoublyLinkedList.h          # Defines the Node struct and linked list
 DoublyLinkedList.cpp        # Performs linked list operations
 DocumentCache.h             # Declares LRU cache class
 DocumentCache.cpp           # Implementation of cache function
 README.md                   # Project description and walkthrough
+
+```
 
 # Program Structure:
 
