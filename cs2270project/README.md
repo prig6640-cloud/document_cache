@@ -1,6 +1,6 @@
 # Project: Document Cache using LRU (Least Recently Used)
 
-Project Goal: This project utilizes a caching system that stores most of the users' recently opened documents. This program keeps recent documents at the front and removes the oldest documents when the cache becomes full.  
+Project Goal: This project utilizes a caching system that stores most of the users' recently opened documents. This program keeps recent documents at the front and removes the oldest documents when the cache becomes full.
 
 Data Structure: This project implements a doubly linked list with a hash table. 
 
@@ -12,6 +12,7 @@ This project highlights:
 
 # File Structure
 
+```cpp
 main.cpp                    # main file that runs to test cache
 DoublyLinkedList.h          # Defines the Node struct and linked list
 DoublyLinkedList.cpp        # Performs linked list operations
@@ -19,6 +20,7 @@ DocumentCache.h             # Declares LRU cache class
 DocumentCache.cpp           # Implementation of cache function
 README.md                   # Project description and walkthrough
 
+```
 
 # Program Structure:
 
@@ -47,11 +49,12 @@ What's in the node?
 3. next_node is a pointer that points to the next node in the list
 
 The benefit of two pointers is that the list can be traversed either way. 
-Operations like inserting or deleting can be done efficiently without traversing through the whole list. 
+Operations like inserting or deleting can be done efficiently without traversing through the whole list.
 
 KEY FUNCTION:
- 
-void DocumentCache::open_document(const string& doc_name) 
+```cpp
+void DocumentCache::open_document(const string& doc_name)
+```
  
 - This function handles the opening of documents
 - It starts by searching the hash table to find out if the document exists 
@@ -60,31 +63,33 @@ void DocumentCache::open_document(const string& doc_name)
     1. The first is that if the cache is out of space, then the least recent node is deleted from the list as well as the hash table
     2. Secondly, a new node is created, placed at the front, and saved in the hash
 
-- This highlights how the linked list and hash table are used together in order to keep the cache ordered. 
+- This highlights how the linked list and hash table are used together in order to keep the cache ordered.
+
 
 OTHER KEY FUNCTIONS:
-
+```cpp
 1. Node* insert_to_front(const string& doc_name)
+```
 
 - This function makes a new node and sets it in the first position
 - Any new document is declared as most recent
 - Returns the pointer to this node and gets saved in the hash
 
-
+```cpp
 2. void DoublyLinkedList::move_to_front(Node* node)
+```
 
 - This function updates the document's position in the list
 - If a document is already in the cache, then it moves back to the front 
 - This avoids any duplicate entries and maintains the order (most recent to least recent)
 
-
+```cpp
 3. Node* DoublyLinkedList::remove_tail()
+```
 
 - This function removes the oldest document from the list
 - When capacity is full, it removes the last item and returns to the cache
 - It is removed from memory
-
-4. class DocumentCache 
 
 CODE SNIPPET 2:
 
@@ -98,6 +103,8 @@ private:
 };
 
 ```
+The DocumentCache class uses an LRU which keeps track of the documents in the order the user opened them
+
 Key Member Variables
 
 1. int capacity
@@ -116,7 +123,7 @@ Key Member Variables
 - this member variable pairs the document name with its corresponding node
 - cache checks if document is stored - fast search (O(1))
 
-
+```cpp
 # Time and Space Complexity
 
 Operation                  Average Case        Worst Case          Explanation
@@ -125,7 +132,7 @@ Operation                  Average Case        Worst Case          Explanation
 2. Search Doc                O(1)                O(1)        Hash finds node fast
 3. Move Doc to Front         O(1)                O(1)        Only ptr updates
 4. Delete Oldest Doc         O(1)                O(1)        Deletes tail
-
+```
 
 # What the Program Does:
 
@@ -166,8 +173,7 @@ Explanation:
 - When you type a new document, it gets added to the front of the list
 - I declared that only three documents belonged in the cache. 
 - When I entered a fourth document, the cache reached its capacity.
-- Therefore, it removed recipe book and added shopping list to the front of the list. 
-
+- Therefore, it removed recipe book and added shopping list to the front of the list.
 
 # Running the Program Demo
 
@@ -175,11 +181,15 @@ Follow the steps below to set up and run the program:
 1. Open terminal inside VS Code
 2. Compile the program by pasting in this command:
 
+```cpp
 clang++ main.cpp DoublyLinkedList.cpp DocumentCache.cpp -std=c++17 -o doc_cache
+```
 
 3. Once it is compiled, run the program using this command:
 
+```cpp
 ./doc_cache
+```
 
 4. The program will execute inside of main.cpp. It will display a menu where you can enter:
 
