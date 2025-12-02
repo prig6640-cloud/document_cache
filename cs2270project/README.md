@@ -185,7 +185,7 @@ Follow the steps below to set up and run the program:
 2. Compile the program by pasting in this command:
 
 ```cpp
-clang++ main.cpp DoublyLinkedList.cpp DocumentCache.cpp -std=c++17 -o doc_cache
+g++ -std=c++11 main.cpp DoublyLinkedList.cpp DocumentCache.cpp -o document_cache
 ```
 
 3. Once it is compiled, run the program using this command:
