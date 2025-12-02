@@ -92,7 +92,7 @@ OTHER KEY FUNCTIONS:
 
 - This function removes the oldest document from the list
 - When capacity is full, it removes the last item and returns to the cache
-- It is removed from memory
+- Removes the last node and returns to cache for deletion 
 
 CODE SNIPPET 2:
 
