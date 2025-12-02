@@ -126,7 +126,7 @@ Key Member Variables
 - this member variable pairs the document name with its corresponding node
 - cache checks if document is stored - fast search (O(1))
 
-
+```cpp
 # Time and Space Complexity
 
 Operation                  Average Case        Worst Case          Explanation
@@ -135,7 +135,7 @@ Operation                  Average Case        Worst Case          Explanation
 2. Search Doc                O(1)                O(1)        Hash finds node fast
 3. Move Doc to Front         O(1)                O(1)        Only ptr updates
 4. Delete Oldest Doc         O(1)                O(1)        Deletes tail
-
+```
 
 # What the Program Does:
 
