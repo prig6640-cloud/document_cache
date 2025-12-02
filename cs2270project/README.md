@@ -36,8 +36,11 @@ struct Node {
     Node* prev_node;
     Node* next_node;
 
-    Node(const string& name)
-        : doc_name(name), prev_node(nullptr), next_node(nullptr){}
+    Node(const string& name) {
+        doc_name = name;
+        prev_node = nullptr;
+        next_node = nullptr;
+    }
 };
 
 ```
