@@ -103,7 +103,7 @@ private:
 };
 
 ```
-The DocumentCache class uses an LRU which keeps track of the documents opened in order
+The DocumentCache class uses an LRU which keeps track of the documents in the order the user opened them
 
 Key Member Variables
 
